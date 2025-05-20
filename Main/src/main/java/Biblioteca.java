@@ -11,7 +11,7 @@ public class Biblioteca {
     //Método para Buscar Livros por Isbn e Cadastrar
     public void cadastrarLivro(Livro novoLivro) {
         for (Livro livro : livros) {
-            if (livro.getIsbn().equals(novoLivro.getIsbn())) {
+            if (livro.getIsbn().equals(novoLivro.getIsbn())) { //Equals porque Isbn é um número inteiro, e se usar == vai dar erro, porque == retorna o endereço e não o valor na mémoria
                 System.out.println("Erro: ISBN ja cadastrado.");
                 return;
             }
