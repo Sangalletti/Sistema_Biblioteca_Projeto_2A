@@ -11,7 +11,7 @@ public class Biblioteca {
     //Método para Buscar Livros por Isbn e Cadastrar
     public void cadastrarLivro(Livro novoLivro) {
         for (Livro livro : livros) {
-            if (livro.getIsbn() == novoLivro.getIsbn()) {
+            if (livro.getIsbn().equals(novoLivro.getIsbn())) {
                 System.out.println("Erro: ISBN ja cadastrado.");
                 return;
             }
@@ -23,7 +23,7 @@ public class Biblioteca {
     //Método para Buscar Usuarios por ID e Cadastrar
     public void cadastrarUsuario(Usuario novoUsuario) {
         for (Usuario usuario : usuarios) {
-            if (usuario.getId() == novoUsuario.getId()) {
+            if (usuario.getId().equals(novoUsuario.getId())) {
                 System.out.println("Erro: ID ja cadastrado.");
                 return;
             }
@@ -35,7 +35,7 @@ public class Biblioteca {
     //Método para Buscar Administrador por ID e Cadastrar
     public void cadastrarAdministrador(Administrador novoAdministrador) {
         for (Administrador administrador : administradores) {
-            if (administrador.getId() == novoAdministrador.getId()) {
+            if (administrador.getId().equals(novoAdministrador.getId())) {
                 System.out.println("Erro: ID ja cadastrado.");
                 return;
             }
